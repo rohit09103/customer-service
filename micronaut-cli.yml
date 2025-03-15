@@ -1,0 +1,6 @@
+applicationType: grpc
+defaultPackage: com.localhost.customer
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle_kotlin
+features: [app-name, data, data-jpa, discovery-core, gradle, grpc, h2, hibernate-jpa, http-client-test, jackson-databind, java, java-application, jdbc-hikari, junit, logback, lombok, micronaut-build, mockito, properties, readme, serialization-jackson, shade, testcontainers, tracing-opentelemetry-annotations, tracing-opentelemetry-exporter-zipkin, tracing-opentelemetry-grpc, tracing-opentelemetry-zipkin]
