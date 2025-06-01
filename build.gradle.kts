@@ -17,18 +17,22 @@ dependencies {
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     annotationProcessor("io.micronaut.tracing:micronaut-tracing-opentelemetry-annotation")
+    annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
+    implementation("io.micronaut.validation:micronaut-validation")
+    implementation("io.grpc:grpc-services:1.68.1")
     implementation("io.micronaut.grpc:micronaut-grpc-server-runtime")
+    implementation("io.micronaut:micronaut-management")
     implementation("io.micronaut:micronaut-discovery-core")
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
-    implementation("io.micronaut.data:micronaut-data-tx-hibernate")
+    //implementation("io.micronaut.data:micronaut-data-jpa")
     implementation("io.micronaut.grpc:micronaut-grpc-runtime")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
-    implementation("io.micronaut.sql:micronaut-hibernate-jpa")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.tracing:micronaut-tracing-opentelemetry-grpc")
     implementation("io.opentelemetry:opentelemetry-exporter-zipkin")
     implementation("javax.annotation:javax.annotation-api")
+	implementation("org.apache.commons:commons-lang3:3.12.0")
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
@@ -82,6 +86,3 @@ micronaut {
         annotations("com.localhost.customer.*")
     }
 }
-
-
-

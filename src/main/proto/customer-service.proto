@@ -8,9 +8,9 @@ option objc_class_prefix = "HLW";
 package com.localhost.customer;
 
 service CustomerClientService {
-  rpc createCustomer (CustomerCreateRequest) returns (CustomerCreateReply) {}
+  rpc CreateCustomer (CustomerCreateRequest) returns (CustomerCreateReply) {}
   
-  rpc fetchCustomer (CustomerFetchRequest) returns (CustomerFetchReply) {}
+  rpc FetchCustomer (CustomerFetchRequest) returns (CustomerFetchReply) {}
 }
 
 message CustomerCreateRequest {

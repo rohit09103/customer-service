@@ -22,8 +22,7 @@ public class CustomerEndpoint extends CustomerClientServiceImplBase {
 	final CustomerService customerService;
 
 	/**
-	 * @param customerService
-	 */
+     */
 	public CustomerEndpoint(CustomerService customerService) {
 		this.customerService = customerService;
 	}
@@ -46,18 +45,15 @@ public class CustomerEndpoint extends CustomerClientServiceImplBase {
 	}
 
 	/**
-	 * @param customer
-	 * @return
-	 */
+     */
 	private CustomerCreateReply buildCustomerCreateReply(Customer customer) {
-		CustomerCreateReply customerCreateReply = CustomerCreateReply.newBuilder()
-		.setFirstName(customer.getFirstName())
-		.setLastName(customer.getLastName())
-		.setPhoneNumber(customer.getPhoneNumber())
-		.setEmail(customer.getEmail())
-		.setUserId(customer.getCustomerId())
-		.build();
-		return customerCreateReply;
+        return CustomerCreateReply.newBuilder()
+        .setFirstName(customer.getFirstName())
+        .setLastName(customer.getLastName())
+        .setPhoneNumber(customer.getPhoneNumber())
+        .setEmail(customer.getEmail())
+        .setUserId(customer.getCustomerId())
+        .build();
 	}
 
 	@Override
@@ -77,22 +73,17 @@ public class CustomerEndpoint extends CustomerClientServiceImplBase {
 	}
 
 	/**
-	 * @param customers
-	 * @return
-	 */
+     */
 	private CustomerFetchReply buildCustomerFetchReply(List<Customer> customers) {
-		CustomerFetchReply customerFetchReply = CustomerFetchReply.newBuilder()
-		.addAllCustomers(customers.stream().map(it -> {
-			return com.localhost.customer.Customer.newBuilder()
-			.setFirstName(it.getFirstName())
-			.setLastName(it.getLastName())
-			.setPhoneNumber(it.getPhoneNumber())
-			.setEmail(it.getEmail())
-			.setUserId(it.getCustomerId())
-			.build();
-		}).toList())
-		.build();
-		return customerFetchReply;
+        return CustomerFetchReply.newBuilder()
+        .addAllCustomers(customers.stream().map(it -> com.localhost.customer.Customer.newBuilder()
+        .setFirstName(it.getFirstName())
+        .setLastName(it.getLastName())
+        .setPhoneNumber(it.getPhoneNumber())
+        .setEmail(it.getEmail())
+        .setUserId(it.getCustomerId())
+        .build()).toList())
+        .build();
 	}
 
 }

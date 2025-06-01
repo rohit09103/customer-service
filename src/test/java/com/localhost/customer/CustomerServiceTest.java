@@ -15,7 +15,8 @@ class CustomerServiceTest {
 
     @Test
     void testItWorks() {
-        Assertions.assertTrue(application.isRunning());
+        //TODO 
+    	Assertions.assertTrue(application.isRunning());
     }
 
 }
