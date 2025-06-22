@@ -25,7 +25,7 @@ dependencies {
     implementation("io.micronaut:micronaut-discovery-core")
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
-    //implementation("io.micronaut.data:micronaut-data-jpa")
+    implementation("io.micronaut.grpc:micronaut-protobuff-support")
     implementation("io.micronaut.grpc:micronaut-grpc-runtime")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
